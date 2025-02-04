@@ -29,12 +29,12 @@ def create_app(db_url=None):
     migrate = Migrate(app, db)
     api = Api(app)
 
-    app.config["JWT_SECRET_KEY"] = "jose"
+    app.config["JWT_SECRET_KEY"] = "boss"
     jwt = JWTManager(app)
 
     # @jwt.additional_claims_loader
     # def add_claims_to_jwt(identity):
-    #     # TODO: Read from a config file instead of hard-coding
+    #   
     #     if identity == 1:
     #         return {"is_admin": True}
     #     return {"is_admin": False}
